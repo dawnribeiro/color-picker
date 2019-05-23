@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Header extends Component {
   render() {
-    return <h1>COLOR PICKER</h1>
+    return <h1 className="header">COLOR PICKER</h1>
   }
 }
 

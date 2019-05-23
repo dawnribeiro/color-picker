@@ -11,8 +11,41 @@ body {
   min-height: 100%;
 }
 
-.colorContainer {
+.color-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.color {
   height: 100px;
   width: 100px;
-  border: 5px solid black;
+  border: 3px solid black;
+}
+
+.hue {
+  border: solid pink 5px;
+  height: 100px;
+  text-align: center;
+}
+
+.saturation {
+  border: solid pink 5px;
+  height: 100px;
+  text-align: center;
+}
+
+.lightness {
+  border: solid pink 5px;
+  height: 100px;
+  text-align: center;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header {
+  text-align: center;
 }

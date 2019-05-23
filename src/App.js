@@ -30,42 +30,52 @@ class App extends Component {
     return (
       <>
         <Header />
-        <div
-          style={{
-            backgroundColor: `hsl(${this.state.hue},${this.state.saturation}%,${
-              this.state.lightness
-            }%)`
-          }}
-        >
-          Hello World
-        </div>
-        <input
-          onChange={this.hueChange}
-          className="hue"
-          type="range"
-          min="1"
-          max="360"
-          class="slider"
-          // id="myRange"
-        />
-        <input
-          onChange={this.saturationChange}
-          className="saturation"
-          type="range"
-          min="1"
-          max="100"
-          class="slider"
-          id="myRange"
-        />
-        <input
-          onChange={this.lightnessChange}
-          className="lightness"
-          type="range"
-          min="1"
-          max="100"
-          class="slider"
-          id="myRange"
-        />
+
+        <section className="color-container">
+          <div
+            className="color"
+            style={{
+              backgroundColor: `hsl(${this.state.hue},${
+                this.state.saturation
+              }%,${this.state.lightness}%)`
+            }}
+          />
+        </section>
+        <section className="slider-container">
+          <div className="hue">
+            <input
+              onChange={this.hueChange}
+              type="range"
+              min="1"
+              max="360"
+              class="slider"
+              id="hue"
+            />
+            <h3>Hue</h3>
+          </div>
+          <div className="saturation">
+            <input
+              onChange={this.saturationChange}
+              type="range"
+              min="1"
+              max="100"
+              class="slider"
+              id="saturation"
+            />
+            <h3>Saturation</h3>
+          </div>
+          <div className="lightness">
+            <input
+              onChange={this.lightnessChange}
+              type="range"
+              min="1"
+              max="100"
+              class="slider"
+              id="lightness"
+            />
+            <h3>Lightness</h3>
+          </div>
+        </section>
       </>
     )
   }
