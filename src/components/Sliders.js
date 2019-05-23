@@ -19,15 +19,10 @@ class Sliders extends Component {
   }
 
   hueChange = event => {
-    // get the current value of the hue slider
-    console.log(event.target.value)
-    // put the value into state
     this.setState({ hue: event.target.value })
-    console.log(event.target.value)
   }
 
   saturationChange = event => {
-    console.log(event.target.value)
     this.setState({ saturation: event.target.value })
   }
 
