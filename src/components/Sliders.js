@@ -85,7 +85,7 @@ class Sliders extends Component {
             <p>{this.state.lightness}</p>
           </div>
         </section>
-        <div>
+        <div className="button">
           <button onClick={this.randomColor}>Pick Random Color</button>
         </div>
       </>
