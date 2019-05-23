@@ -43,7 +43,8 @@ body {
 
 .slider-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  margin: 0 150px 0 150px;
 }
 
 .header {
