@@ -6,14 +6,17 @@ class Sliders extends Component {
     saturation: 50,
     lightness: 50
   }
+  randomColor = () => {
+    this.setState({
+      hue: Math.ceil(Math.random() * 360),
+      saturation: Math.ceil(Math.random() * 100),
+      lightness: Math.ceil(Math.random() * 100)
+    })
+  }
 
-  // componentDidMount() {
-  //   style = {
-  //     backgroundColor: `hsl(${this.state.hue},${this.state.saturation}%,${
-  //       this.state.lightness
-  //     }%)`
-  //   }
-  // }
+  componentDidMount() {
+    this.randomColor()
+  }
 
   hueChange = event => {
     // get the current value of the hue slider
@@ -82,6 +85,9 @@ class Sliders extends Component {
             <p>{this.state.lightness}</p>
           </div>
         </section>
+        <div>
+          <button onClick={this.randomColor}>Pick Random Color</button>
+        </div>
       </>
     )
   }
